@@ -75,7 +75,6 @@ public class BreachServiceImpl implements BreachService {
 		List<BusinessCategoryResponseDto> responseList = new ArrayList<>();
 		List<BusinessCategory> categoryList = businessCategoryRepository.findAll();
 		if(categoryList.isEmpty()) {
-			
 			throw new CategoryNotFoundException("categories not found");
 		}else
 		categoryList.stream().forEach(c ->{
